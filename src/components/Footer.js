@@ -11,4 +11,4 @@ const Footer = () => {
   return <FooterDiv />;
 };
 
-export default FooterDiv;
+export default Footer;

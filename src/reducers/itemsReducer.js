@@ -1,5 +1,3 @@
-import { itemState } from "../actions/itemState";
-
 const initialState = {
   count: 0,
 };

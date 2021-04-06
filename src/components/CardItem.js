@@ -55,12 +55,12 @@ const CardImgContainer = styled.div`
 const CardItemName = styled.p`
   font-size: 0.8em;
   margin: 10px;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 const CardItemPrice = styled.p`
-  font-weight: 200;
-  font-size: 1em;
+  font-weight: 400;
+  font-size: 0.8em;
   margin: 10px;
 `;
 
@@ -74,7 +74,7 @@ const CardItem = () => {
             return (
               <Card key={data.id}>
                 <CardImgContainer image={data.imageUrl}>
-                  <img src={data.imageUrl}></img>
+                  <img src={data.imageUrl} alt=''></img>
                 </CardImgContainer>
                 <CardItemName>{data.name}</CardItemName>
                 <CardItemPrice>{data.price}</CardItemPrice>
