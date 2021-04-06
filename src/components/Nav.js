@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const NavBar = styled.div`
   width: 75%;
@@ -28,6 +29,22 @@ const Logo = styled.a`
 const ShopCart = styled.a`
   margin-right: 10px;
   font-size: 1.2em;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
 `;
 
 const Nav = () => {
@@ -37,11 +54,17 @@ const Nav = () => {
         <Menu>Menu</Menu>
       </NavContainer>
       <NavContainer>
-        <Logo>PlantsPH</Logo>
+        <StyledLink to='/'>
+          <Logo>PlantsPH</Logo>
+        </StyledLink>
       </NavContainer>
       <NavContainer>
-        <ShopCart>Shop</ShopCart>
-        <ShopCart>Cart</ShopCart>
+        <StyledLink to='/shop'>
+          <ShopCart>Shop</ShopCart>
+        </StyledLink>
+        <StyledLink to='/cart'>
+          <ShopCart>Cart</ShopCart>
+        </StyledLink>
       </NavContainer>
     </NavBar>
   );
