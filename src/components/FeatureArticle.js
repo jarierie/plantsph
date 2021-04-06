@@ -5,7 +5,7 @@ const ArticleContainer = styled.div`
   max-width: 60%;
   margin: 50px auto;
   flex-direction: ${(props) =>
-    props.theme == "theme" ? "row-reverse" : "row"};
+    props.theme === "theme" ? "row-reverse" : "row"};
   display: flex;
   width: 60%;
   justify-content: space-evenly;

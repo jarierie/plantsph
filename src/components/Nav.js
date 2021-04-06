@@ -36,6 +36,7 @@ const ShopCart = styled.a`
 `;
 
 const StyledLink = styled(Link)`
+  font-size: 1.2em;
   color: black;
   text-decoration: none;
   &:focus,
