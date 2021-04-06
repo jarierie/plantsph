@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { itemList } from "../data/itemList";
 
 const CardContainer = styled.div`
   margin: 10px auto;
@@ -10,7 +11,7 @@ const CardContainer = styled.div`
   min-width: 50%;
   @media (max-width: 768px) {
     width: 90%;
-    
+
     margin: auto;
   }
 `;
@@ -45,6 +46,10 @@ const CardImgContainer = styled.div`
   width: 300px;
   height: 400px;
   background-color: #e8e6e7;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const CardItemName = styled.p`
@@ -65,54 +70,17 @@ const CardItem = () => {
       <CardContainer>
         <Heading>Explore New Arrivals</Heading>
         <ItemContainer>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Sarap naman non</CardItemName>{" "}
-            <CardItemPrice>₱50.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Mukbang</CardItemName>{" "}
-            <CardItemPrice>₱28.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Mukbang</CardItemName>{" "}
-            <CardItemPrice>₱28.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Mukbang</CardItemName>{" "}
-            <CardItemPrice>₱28.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Sarap naman non</CardItemName>{" "}
-            <CardItemPrice>₱50.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Mukbang</CardItemName>{" "}
-            <CardItemPrice>₱28.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Mukbang</CardItemName>{" "}
-            <CardItemPrice>₱28.00</CardItemPrice>
-          </Card>
-          <Card>
-            {" "}
-            <CardImgContainer />
-            <CardItemName>Mukbang</CardItemName>{" "}
-            <CardItemPrice>₱28.00</CardItemPrice>
-          </Card>
+          {itemList.map((data) => {
+            return (
+              <Card key={data.id}>
+                <CardImgContainer image={data.imageUrl}>
+                  <img src={data.imageUrl}></img>
+                </CardImgContainer>
+                <CardItemName>{data.name}</CardItemName>
+                <CardItemPrice>{data.price}</CardItemPrice>
+              </Card>
+            );
+          })}
         </ItemContainer>
       </CardContainer>
     </>

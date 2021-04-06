@@ -3,7 +3,8 @@ import styled from "styled-components";
 import heroImg2 from "../assets/images/heroImg2.jpg";
 
 const HeroContainer = styled.div`
-  margin: auto;
+  margin: 20px auto;
+
   width: 1000px;
   height: 400px;
   background: url(${heroImg2});
@@ -18,7 +19,7 @@ const HeroContainer = styled.div`
 `;
 
 const Hero = () => {
-  return <HeroContainer></HeroContainer>;
+  return <HeroContainer />;
 };
 
 export default Hero;
