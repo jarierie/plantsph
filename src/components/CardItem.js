@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { itemList } from "../data/itemList";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
   margin: 10px auto;
@@ -74,20 +75,22 @@ const CardItem = () => {
         <ItemContainer>
           {itemList.map((data) => {
             return (
-              <Card key={data.id}>
-                <CardImgContainer image={data.imageUrl}>
-                  <motion.img
-                    whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.5 },
-                    }}
-                    src={data.imageUrl}
-                    alt=''
-                  />
-                </CardImgContainer>
-                <CardItemName>{data.name}</CardItemName>
-                <CardItemPrice>{data.price}</CardItemPrice>
-              </Card>
+              <Link to='/itemPage'>
+                <Card key={data.id}>
+                  <CardImgContainer image={data.imageUrl}>
+                    <motion.img
+                      whileHover={{
+                        scale: 1.1,
+                        transition: { duration: 0.5 },
+                      }}
+                      src={data.imageUrl}
+                      alt=''
+                    />
+                  </CardImgContainer>
+                  <CardItemName>{data.name}</CardItemName>
+                  <CardItemPrice>{data.price}</CardItemPrice>
+                </Card>
+              </Link>
             );
           })}
         </ItemContainer>

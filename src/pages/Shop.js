@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import styled from "styled-components";
 
 const Heading = styled.h1`
-text-align: center;
+  text-align: center;
   width: 30%;
   font-size: 2em;
   margin: auto;

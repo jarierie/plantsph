@@ -1,19 +1,17 @@
+// Add the initial item State in here.
+
 const initialState = {
-  count: 0,
+  data: [],
 };
 
-const itemStateReducer = (state = initialState, action) => {
+// Filtering the data base on the plantType.
+
+const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "getItemState":
+    case "getState":
       return {
-        count: state.count + 1,
+        data: state.data.filter(state.data.plantType === action.payload),
       };
-    case "decreaseState":
-      return {
-        count: state.count - 1,
-      };
-    default:
-      return state;
   }
 };
-export default itemStateReducer;
+export default rootReducer;
