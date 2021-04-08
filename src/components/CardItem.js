@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { itemList } from "../data/itemList";
+import { motion } from "framer-motion";
 
 const CardContainer = styled.div`
   margin: 10px auto;
@@ -46,6 +47,7 @@ const CardImgContainer = styled.div`
   width: 300px;
   height: 400px;
   background-color: #e8e6e7;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
@@ -74,7 +76,14 @@ const CardItem = () => {
             return (
               <Card key={data.id}>
                 <CardImgContainer image={data.imageUrl}>
-                  <img src={data.imageUrl} alt=''></img>
+                  <motion.img
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 0.5 },
+                    }}
+                    src={data.imageUrl}
+                    alt=''
+                  />
                 </CardImgContainer>
                 <CardItemName>{data.name}</CardItemName>
                 <CardItemPrice>{data.price}</CardItemPrice>

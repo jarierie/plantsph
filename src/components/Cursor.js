@@ -11,7 +11,6 @@ const CursorStyle = styled(motion.div)`
   height: 0.36vw;
   padding: 1.5vw;
   border-radius: 100%;
-  background-color: transparent;
   border: 0.1vw solid var(--black);
   /* mix-blend-mode: difference; */
   z-index: 20;

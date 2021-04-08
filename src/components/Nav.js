@@ -11,13 +11,6 @@ const NavBar = styled.div`
   align-items: center;
 `;
 
-const NavContainer = styled.div`
-  width: 200px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-`;
-
 const Logo = styled.a`
   font-size: 2em;
   color: green;
