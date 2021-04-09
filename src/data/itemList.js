@@ -18,6 +18,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant1,
+    type: "maliit",
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant2,
+    type: "maliit",
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant3,
+    type: "maliit",
   },
   {
     id: 4,
@@ -39,6 +42,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant4,
+    type: "maliit",
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant5,
+    type: "maliit",
   },
   {
     id: 6,
@@ -53,6 +58,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant6,
+    type: "maliit",
   },
   {
     id: 7,
@@ -60,6 +66,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant7,
+    type: "maliit",
   },
   {
     id: 8,
@@ -67,6 +74,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant8,
+    type: "maliit",
   },
   {
     id: 9,
@@ -74,6 +82,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant9,
+    type: "maliit",
   },
   {
     id: 10,
@@ -81,6 +90,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant10,
+    type: "malaki",
   },
   {
     id: 11,
@@ -88,6 +98,7 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant11,
+    type: "malaki",
   },
   {
     id: 12,
@@ -95,5 +106,6 @@ export const itemList = [
     price: "50 pesos",
     stock: 2,
     imageUrl: plant12,
+    type: "malaki",
   },
 ];
