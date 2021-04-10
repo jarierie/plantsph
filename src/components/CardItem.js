@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { itemList } from "../data/itemList";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addNumberAction } from "../actions/addNumberAction";
 
 const CardContainer = styled.div`
   margin: 10px auto;
@@ -68,19 +69,37 @@ const CardItemPrice = styled.p`
 `;
 
 const CardItem = () => {
+  const items = useSelector((state) => state.currentState);
+
+  const dispatch = useDispatch();
+  console.log(items);
   return (
     <>
+      <button
+        onClick={() => {
+          dispatch(addNumberAction("malaki"));
+        }}
+      >
+        Malaki
+      </button>
+      <button
+        onClick={() => {
+          dispatch(addNumberAction("maliit"));
+        }}
+      >
+        Maliit
+      </button>
       <CardContainer>
         <Heading>Explore New Arrivals</Heading>
         <ItemContainer>
-          {itemList.map((data) => {
+          {items.map((data) => {
             return (
               <Link to='/itemPage'>
                 <Card key={data.id}>
                   <CardImgContainer image={data.imageUrl}>
                     <motion.img
                       whileHover={{
-                        scale: 1.1,
+                        scale: 1.05,
                         transition: { duration: 0.5 },
                       }}
                       src={data.imageUrl}
