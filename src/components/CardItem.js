@@ -72,7 +72,7 @@ const CardItem = () => {
   const items = useSelector((state) => state.currentState);
 
   const dispatch = useDispatch();
-  console.log(items);
+
   return (
     <>
       <button
@@ -94,7 +94,7 @@ const CardItem = () => {
         <ItemContainer>
           {items.map((data) => {
             return (
-              <Link to='/itemPage'>
+              <Link to={`/shop/${data.name}`}>
                 <Card key={data.id}>
                   <CardImgContainer image={data.imageUrl}>
                     <motion.img

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 
+import ItemPage from "./components/ItemPage";
 import Cursor from "./components/Cursor";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <>
       <Router>
         <Provider store={store}>
-          <Cursor />
+          {/* <Cursor /> */}
           <Switch>
             <Route exact path='/'>
               <Home />
@@ -24,6 +25,7 @@ function App() {
             <Route exact path='/cart'>
               <Cart />
             </Route>
+            <Route path='/shop/:name' component={ItemPage}></Route>
           </Switch>
         </Provider>
       </Router>
