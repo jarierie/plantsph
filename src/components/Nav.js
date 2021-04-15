@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const NavBar = styled.div`
   width: 75%;
@@ -32,6 +33,8 @@ const StyledLink = styled(Link)`
 const List = styled.div``;
 
 const Nav = () => {
+  const cartLength = useSelector((state) => state.cart);
+  console.log(cartLength.length);
   return (
     <NavBar>
       <StyledLink to='/'>
@@ -41,6 +44,7 @@ const Nav = () => {
         <StyledLink to='/shop'>Shop</StyledLink>
         <StyledLink to='/cart'> Cart</StyledLink>
       </List>
+      <h1>{cartLength.length} items on Cart</h1>
     </NavBar>
   );
 };

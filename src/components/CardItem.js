@@ -10,7 +10,7 @@ const CardContainer = styled.div`
   width: 60%;
   background-color: #edece9;
   padding: 10px;
-
+  justify-content: center;
   min-width: 50%;
   @media (max-width: 768px) {
     width: 90%;
@@ -24,6 +24,11 @@ const ItemContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
+  @media (max-width: 768px) {
+    justify-content: center;
+
+    margin: auto;
+  }
 `;
 
 const Heading = styled.h1`
@@ -96,7 +101,7 @@ const CardItem = () => {
             return (
               <Link to={`/shop/${data.name}`}>
                 <Card key={data.id}>
-                  <CardImgContainer image={data.imageUrl}>
+                  <CardImgContainer>
                     <motion.img
                       whileHover={{
                         scale: 1.05,

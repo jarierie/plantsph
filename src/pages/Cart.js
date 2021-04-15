@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import styled from "styled-components";
 import TransitionPage from "../components/TransitionPage";
 import Mock from "../components/mock";
+import Cart from "../components/Cart";
 
 const Heading = styled.h1`
   text-align: center;
@@ -16,8 +17,8 @@ const Card = () => {
   return (
     <>
       <TransitionPage />
-      <Nav /> <Heading>Your Cart is yet to be found</Heading>
-      <Mock />
+      <Nav />
+      <Cart></Cart>
     </>
   );
 };
