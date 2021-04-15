@@ -7,15 +7,14 @@ import { addNumberAction } from "../actions/addNumberAction";
 
 const CardContainer = styled.div`
   margin: 10px auto;
-  width: 60%;
+  width: 1200px;
+  max-width: 90%;
   background-color: #edece9;
-  padding: 10px;
+  padding: 20px 40px 20px 40px;
   justify-content: center;
-  min-width: 50%;
-  @media (max-width: 768px) {
-    width: 90%;
 
-    margin: auto;
+  @media (max-width: 768px) {
+    max-width: 80%;
   }
 `;
 
@@ -24,6 +23,7 @@ const ItemContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
+  padding: 10px;
   @media (max-width: 768px) {
     justify-content: center;
 
@@ -45,6 +45,7 @@ const Card = styled.div`
   transition: 0.8s;
   margin: auto;
   margin-top: 20px;
+  color: black;
   :hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -55,6 +56,7 @@ const CardImgContainer = styled.div`
   height: 400px;
   background-color: #e8e6e7;
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;
@@ -99,12 +101,15 @@ const CardItem = () => {
         <ItemContainer>
           {items.map((data) => {
             return (
-              <Link to={`/shop/${data.name}`}>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/shop/${data.name}`}
+              >
                 <Card key={data.id}>
                   <CardImgContainer>
                     <motion.img
                       whileHover={{
-                        scale: 1.05,
+                        scale: 0.95,
                         transition: { duration: 0.5 },
                       }}
                       src={data.imageUrl}

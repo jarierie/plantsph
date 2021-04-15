@@ -13,7 +13,6 @@ const ItemContainer = styled.div`
   height: auto;
   min-width: 80%;
 
-  background-color: #0d0d0d;
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;

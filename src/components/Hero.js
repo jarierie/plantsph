@@ -4,7 +4,8 @@ import heroImg2 from "../assets/images/heroImg2.jpg";
 
 const HeroContainer = styled.div`
   margin: 20px auto;
-
+  max-width: 80%;
+  min-height: 400px;
   width: 1000px;
   height: 400px;
   background: url(${heroImg2});
